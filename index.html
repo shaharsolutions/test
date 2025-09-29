@@ -1,81 +1,86 @@
-export default function Home() {
-  return (
-    <div dir="rtl" className="min-h-screen bg-gradient-to-br from-blue-500 to-indigo-600 text-white font-heebo">
-      {/* Header */}
-      <header className="p-6 flex justify-between items-center">
-        <h1 className="text-3xl font-extrabold tracking-tight">Shahar Solutions</h1>
-        <nav className="space-x-6 space-x-reverse">
-          <a href="#services" className="hover:text-yellow-300 transition">שירותים</a>
-          <a href="#about" className="hover:text-yellow-300 transition">עלינו</a>
-          <a href="#contact" className="hover:text-yellow-300 transition">צור קשר</a>
-        </nav>
-      </header>
-
-      {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center text-center py-28 px-6">
-        <h2 className="text-6xl font-black mb-6 drop-shadow-lg">חדשנות. פתרונות. תוצאות.</h2>
-        <p className="text-xl max-w-2xl mb-10 leading-relaxed">
-          אנחנו ב-Shahar Solutions מפתחים פתרונות טכנולוגיים חכמים כדי להקל על החיים ולעזור לעסקים לצמוח.
-        </p>
-        <a
-          href="#contact"
-          className="bg-yellow-400 text-gray-900 px-10 py-4 rounded-3xl font-bold shadow-lg hover:scale-105 transition transform"
-        >
-          התחילו עכשיו
-        </a>
-      </section>
-
-      {/* Services */}
-      <section id="services" className="py-20 bg-white text-gray-900">
-        <div className="max-w-6xl mx-auto px-6">
-          <h3 className="text-4xl font-bold text-center mb-14">השירותים שלנו</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="bg-gradient-to-tr from-indigo-50 to-white p-10 rounded-3xl shadow hover:shadow-2xl transition">
-              <h4 className="text-2xl font-bold mb-4 text-indigo-700">פיתוח אתרים</h4>
-              <p className="leading-relaxed">
-                אתרים מעוצבים, אינטראקטיביים ומותאמים אישית – כדי שתבלטו בעולם הדיגיטלי ותמכרו יותר.
-              </p>
-            </div>
-            <div className="bg-gradient-to-tr from-indigo-50 to-white p-10 rounded-3xl shadow hover:shadow-2xl transition">
-              <h4 className="text-2xl font-bold mb-4 text-indigo-700">אוטומציות חכמות</h4>
-              <p className="leading-relaxed">
-                חיסכון בזמן ובמשאבים באמצעות מערכות אוטומציה מותאמות שמקדמות מכירות ומייעלות תהליכים.
-              </p>
-            </div>
-            <div className="bg-gradient-to-tr from-indigo-50 to-white p-10 rounded-3xl shadow hover:shadow-2xl transition">
-              <h4 className="text-2xl font-bold mb-4 text-indigo-700">למידה דיגיטלית</h4>
-              <p className="leading-relaxed">
-                פיתוח לומדות וכלי הדרכה אינטראקטיביים שמחזקים את הצוותים שלכם ומספקים חוויית למידה חדשנית.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About */}
-      <section id="about" className="py-20 px-6 text-right">
-        <h3 className="text-4xl font-bold mb-8">מי אנחנו?</h3>
-        <p className="max-w-3xl mx-auto text-xl leading-relaxed">
-          Shahar Solutions הוקמה מתוך תשוקה לשלב טכנולוגיה וחוויית משתמש. אנחנו מאמינים שכל פתרון צריך להיות גם חכם וגם פשוט, ומכוונים ליצירת ערך אמיתי ללקוחות שלנו.
-        </p>
-      </section>
-
-      {/* Contact */}
-      <section id="contact" className="py-20 bg-indigo-700 text-center">
-        <h3 className="text-4xl font-bold mb-8">דברו איתנו</h3>
-        <p className="mb-10 text-lg">נשמח לשמוע על הצרכים שלכם ולבנות יחד פתרון מותאם שמקדם מכירות וצמיחה.</p>
-        <a
-          href="mailto:info@shaharsolutions.com"
-          className="bg-yellow-400 text-gray-900 px-10 py-4 rounded-3xl font-bold shadow-lg hover:scale-105 transition transform"
-        >
-          שלחו מייל
-        </a>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-6 text-center bg-indigo-800">
-        <p className="font-light">© 2025 Shahar Solutions. כל הזכויות שמורות.</p>
-      </footer>
-    </div>
-  );
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shahar Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+body {
+margin: 0;
+font-family: 'Heebo', sans-serif;
+background: linear-gradient(to bottom right, #3b82f6, #4f46e5);
+color: #fff;
 }
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1.5rem;
+}
+header h1 {
+font-size: 1.8rem;
+font-weight: 800;
+}
+nav a {
+margin-left: 1.5rem;
+color: #fff;
+text-decoration: none;
+font-weight: 600;
+transition: color 0.3s;
+}
+nav a:hover {
+color: #facc15;
+}
+section.hero {
+text-align: center;
+padding: 6rem 1rem;
+}
+section.hero h2 {
+font-size: 3rem;
+font-weight: 800;
+margin-bottom: 1rem;
+text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+section.hero p {
+font-size: 1.2rem;
+max-width: 600px;
+margin: 0 auto 2rem;
+line-height: 1.6;
+}
+.cta-button {
+background: #facc15;
+color: #111;
+padding: 1rem 2rem;
+border-radius: 30px;
+font-weight: 700;
+text-decoration: none;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+.cta-button:hover {
+transform: scale(1.05);
+box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+section.services {
+background: #fff;
+color: #111;
+padding: 4rem 1rem;
+text-align: center;
+}
+section.services h3 {
+font-size: 2rem;
+margin-bottom: 2rem;
+}
+.service-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 2rem;
+max-width: 1000px;
+margin: 0 auto;
+}
+.service {
+background: #f9fafb;
+padding: 2rem;
+border-radius: 20px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+</html>
